@@ -71,7 +71,7 @@ class HlsQualitySelectorPlugin {
       concreteButtonInstance
         .menuButton_.$('.vjs-icon-placeholder').className += icon;
     } else {
-      this.setButtonInnerText('auto');
+      this.setButtonInnerText(this.player.localize('Auto'));
     }
     concreteButtonInstance.removeClass('vjs-hidden');
 
