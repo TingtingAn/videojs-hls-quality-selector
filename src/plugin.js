@@ -187,7 +187,7 @@ class HlsQualitySelectorPlugin {
    * @return {string} the currently set quality
    */
   getCurrentQuality() {
-    return this._currentQuality || 'auto';
+    return this._currentQuality || this.player.localize('Auto');
   }
 
 }
