@@ -169,7 +169,7 @@ class HlsQualitySelectorPlugin {
     this._currentQuality = quality;
 
     if (this.config.displayCurrentQuality) {
-      this.setButtonInnerText(quality === 'auto' ? quality : `${quality}p`);
+      this.setButtonInnerText(quality === 'auto' ? this.player.localize('Auto') : `${quality}p`);
     }
 
     for (let i = 0; i < qualityList.length; ++i) {
@@ -187,7 +187,7 @@ class HlsQualitySelectorPlugin {
    * @return {string} the currently set quality
    */
   getCurrentQuality() {
-    return this._currentQuality || this.player.localize('Auto');
+    return this._currentQuality || 'auto';
   }
 
 }
